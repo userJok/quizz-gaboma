@@ -1,0 +1,213 @@
+:root {
+    --green: #006341;
+    --yellow: #FCD116;
+    --blue: #3A75C4;
+    --light: #f5f5f5;
+    --dark: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: var(--dark);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.flag {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: var(--green);
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Login Screen */
+#login-screen input {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid var(--green);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#login-screen button {
+    background-color: var(--green);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#login-screen button:hover {
+    background-color: #004d32;
+}
+
+/* Game Screen */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.timer, .score {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.category-selector {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.categories button {
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.categories button:hover {
+    background-color: #2c5da3;
+}
+
+select {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 2px solid var(--green);
+    background-color: white;
+}
+
+.question-container {
+    background-color: rgba(0, 99, 65, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#question-text {
+    margin-bottom: 20px;
+    color: var(--green);
+    text-align: center;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.options button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid var(--green);
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: left;
+}
+
+.options button:hover {
+    background-color: var(--yellow);
+}
+
+/* Result Screen */
+.final-score {
+    font-size: 2rem;
+    color: var(--green);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#restart-btn {
+    background-color: var(--green);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.leaderboard {
+    width: 100%;
+    max-width: 400px;
+}
+
+.leaderboard ol {
+    list-style-position: inside;
+}
+
+.leaderboard li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
